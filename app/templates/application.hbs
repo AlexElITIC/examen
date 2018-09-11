@@ -1,8 +1,11 @@
 {{#each model as |author|}}
-<p>{{author}}</p>
+<p>{{author.firstName}} {{author.lastName}} {{author.nickname}} {{author.age}} </p>
 {{/each}}
 <form {{action 'add' on=submit}}>
-  {{input type="text" value=name}}
+  {{input type="text" value=firstName}}
+  {{input type="text" value=lastName}}
+  {{input type="text" value=nickname}}
+  {{input type="text" value=age}}
 <button>add author</button>
 </form>
 {{outlet}}
